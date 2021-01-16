@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Ben's Weather App</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 </head>
 <body>
@@ -11,41 +11,52 @@
         <div class="container">
           <h1 class="display-4">Weather Application</h1>
           <p class="lead">Select a city of your choice to view weather information.</p>
+          <hr>
+          <form id="city-weather">
+            <label for="city-search-input">Search for a city</label>
+            <input type="text" id="city-input"><br>
+      
+            <!-- This button will trigger our AJAX call -->
+            <input id="find-city" type="submit" value="City Search">
+          </form>
         </div>
       </div>
+
+<!--<div id="weathertest"></div>-->
 
     <div class="container">
         <div class="row">
             <div class="col-sm-12">
               <div class="card">
-                <div class="card-body">
+                <div id="weather1" class="card-body">
                   <h5 class="card-title">Special title treatment</h5>
                   <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                  <a href="#" class="btn btn-primary">Go somewhere</a>
+                  
                 </div>
               </div>
             </div>
             <div class="col-sm-12">
               <div class="card">
-                <div class="card-body">
+                <div id="weather2" class="card-body">
                   <h5 class="card-title">Special title treatment</h5>
                   <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                  <a href="#" class="btn btn-primary">Go somewhere</a>
+                  
                 </div>
               </div>
             </div>
             <div class="col-sm-12">
                 <div class="card">
-                  <div class="card-body">
+                  <div id="weather3" class="card-body">
                     <h5 class="card-title">Special title treatment</h5>
                     <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                    
                   </div>
                 </div>
               </div>
           </div>
     </div>
-    <script src="./script.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="./script.js"></script>
+    
 </body>
 </html>
