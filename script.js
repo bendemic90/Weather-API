@@ -1,15 +1,37 @@
+var clicks = 0;
+
 $("#find-city").on("click", function(displayWeather) {
     var localStor = [];
     displayWeather.preventDefault();
     var city = $("#city-input").val();
     var queryURL = "https://api.openweathermap.org/data/2.5/weather?q=" + city + "&units=metric&appid=53df197488a176e2ad8c359a8a8142e4";
-    var clicks = 0;
     clicks++;
     $.ajax({
     url: queryURL,
     }).then(function(response) {
+    if (clicks === 1) {
+        console.log(response);
         $("#city-name1").text(response.name);
-        $("#today-date").text(moment().format('LLLL'));
+        $("#today-date1").text(moment().format('LLLL'));
+        $("#temperature1").text(response.main.temp);
+        $("#humidity1").text(response.main.humidity);
+        $("#windspeed1").text(response.wind.speed);
+            }
+    if (clicks === 2){
+        $("#city-name2").text(response.name);
+        $("#today-date2").text(moment().format('LLLL'));
+        $("#temperature2").text(response.main.temp);
+        $("#humidity2").text(response.main.humidity);
+        $("#windspeed2").text(response.wind.speed);
+    }
+    if (clicks === 3){
+        $("#city-name3").text(response.name);
+        $("#today-date3").text(moment().format('LLLL'));
+        $("#temperature3").text(response.main.temp);
+        $("#humidity3").text(response.main.humidity);
+        $("#windspeed3").text(response.wind.speed);
+        clicks = 0
+    }
     });
 
 });
