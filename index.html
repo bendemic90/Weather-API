@@ -16,46 +16,54 @@
             <label for="city-search-input">Search for a city</label>
             <input type="text" id="city-input"><br>
       
-            <!-- This button will trigger our AJAX call -->
-            <input id="find-city" type="submit" value="City Search">
+            <input id="find-city" class="btn-primary" type="submit" value="Search">
           </form>
+          <hr>
+          <span id="recentlocal" class="lead">Recently searched cities: </span>
         </div>
       </div>
 
-<!--<div id="weathertest"></div>-->
-
     <div class="container">
         <div class="row">
-            <div class="col-sm-12">
+            <div class="col-sm-4">
               <div class="card">
                 <div id="weather1" class="card-body">
-                  <h5 class="card-title">Special title treatment</h5>
-                  <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                  <span>Area: </span><span id="city-name1"></span>
+                  <hr>
+                  <span >Date: </span><span id="today-date"></span>
+     
                   
                 </div>
+
               </div>
             </div>
-            <div class="col-sm-12">
+
+
+            <div class="col-sm-4">
               <div class="card">
                 <div id="weather2" class="card-body">
-                  <h5 class="card-title">Special title treatment</h5>
-                  <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                  <span>Area: </span><span id="city-name2"></span>
+                  <hr>
+                  <span>Date: </span><span id="today-date"></span>
                   
                 </div>
               </div>
             </div>
-            <div class="col-sm-12">
+
+            <div class="col-sm-4">
                 <div class="card">
                   <div id="weather3" class="card-body">
-                    <h5 class="card-title">Special title treatment</h5>
-                    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                    <span>Area: </span><span id="city-name3"></span>
+                    <hr>
+                    <span>Date: </span><span id="today-date"></span>
                     
                   </div>
                 </div>
               </div>
-          </div>
+        </div>
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
     <script src="./script.js"></script>
     
 </body>
