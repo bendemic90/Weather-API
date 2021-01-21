@@ -4,6 +4,11 @@ var lat = "";
 var long = "";
 const apiKey = "53df197488a176e2ad8c359a8a8142e4";
 
+$("#clearLocal").on("click", function(clear){
+    clear.preventDefault();
+    localStorage.clear();
+})
+
 $("#recentlocal").text(localStorage.getItem("cityHistory1")
                     + ", "
                     + localStorage.getItem("cityHistory2")
