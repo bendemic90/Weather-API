@@ -4,6 +4,12 @@ var lat = "";
 var long = "";
 const apiKey = "53df197488a176e2ad8c359a8a8142e4";
 
+$("#recentlocal").text(localStorage.getItem("cityHistory1")
+                    + ", "
+                    + localStorage.getItem("cityHistory2")
+                    + ", "
+                    + localStorage.getItem("cityHistory3"));
+
 $("#find-city").on("click", function(displayWeather) {
 
     displayWeather.preventDefault();
@@ -19,6 +25,8 @@ $("#find-city").on("click", function(displayWeather) {
     url: queryURL,
     }).then(function(response) {
     if (clicks === 1) {
+        localStorage.setItem("cityHistory1", city);
+        console.log(localStorage.getItem("cityHistory1"))
         $("#city-name1").text(response.name);
         $("#today-date1").text(moment(response.dt, 'X').utcOffset(response.timezone / 3600));
         $("#temperature1").text(response.main.temp);
@@ -50,6 +58,8 @@ $("#find-city").on("click", function(displayWeather) {
             })
             }
     if (clicks === 2) {
+        localStorage.setItem("cityHistory2", city);
+        console.log(localStorage.getItem("cityHistory2"));
         $("#city-name2").text(response.name);
         $("#today-date2").text(moment(response.dt, 'X').utcOffset(response.timezone / 3600));
         $("#temperature2").text(response.main.temp);
@@ -81,6 +91,8 @@ $("#find-city").on("click", function(displayWeather) {
         })
     }
     if (clicks === 3) {
+        localStorage.setItem("cityHistory3", city);
+        console.log(localStorage.getItem("cityHistory3"))
         $("#city-name3").text(response.name);
         $("#today-date3").text(moment(response.dt, 'X').utcOffset(response.timezone / 3600));
         $("#temperature3").text(response.main.temp);
