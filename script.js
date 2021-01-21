@@ -5,6 +5,7 @@ $("#find-city").on("click", function(displayWeather) {
     displayWeather.preventDefault();
     var city = $("#city-input").val();
     var queryURL = "https://api.openweathermap.org/data/2.5/weather?q=" + city + "&units=metric&appid=53df197488a176e2ad8c359a8a8142e4";
+    var forecastURL = "https://api.openweathermap.org/data/2.5/forecast?q=" + city + "&units=metric&appid=53df197488a176e2ad8c359a8a8142e4"
     clicks++;
     $.ajax({
     url: queryURL,
@@ -16,6 +17,11 @@ $("#find-city").on("click", function(displayWeather) {
         $("#temperature1").text(response.main.temp);
         $("#humidity1").text(response.main.humidity);
         $("#windspeed1").text(response.wind.speed);
+            $.ajax({
+                url: forecastURL,
+            }).then(function (forecastResponse){
+                console.log(forecastResponse);
+            })
             }
     if (clicks === 2){
         console.log(response);

@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ben's Weather App</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" crossorigin="anonymous">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 </head>
 <body>
@@ -16,7 +17,7 @@
             <label for="city-search-input">Search for a city</label>
             <input type="text" id="city-input"><br>
       
-            <input id="find-city" class="btn-primary" type="submit" value="Search">
+            <input id="find-city" class="btn-primary btn-lg" type="submit" value="Search">
           </form>
           <hr>
           <span id="recentlocal" class="lead">Recently searched cities: </span>
@@ -39,7 +40,17 @@
                   <span>Wind Speed km/h: </span><span id="windspeed1"></span>
                   <hr>
                   <span>UV Index: </span><span id="uvindex1"></span>
-                 
+                  <hr>
+                  <span>5 Day Forecast: </span>
+                  <hr>
+                  <span id="d2"></span>
+                  <hr>
+                  <span id="d3"></span>
+                  <hr>
+                  <span id="d4"></span>
+                  <hr>
+                  <span id="d5"></span>
+
                 </div>
 
               </div>
