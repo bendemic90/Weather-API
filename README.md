@@ -17,7 +17,7 @@ Utilisation of randomisation and local storage, hiding elements and keeping it a
 4. Definitely didn't leave myself enough time over the holidays to complete this.
 
 ## Link to deployed application
-https://bendemic90.github.io/Coding-quiz/
+https://bendemic90.github.io/Weather-API/
 
 ## Screengrab of deployed application
-![index.html](https://github.com/bendemic90/Coding-quiz/blob/main/assets/grab.png)
+![Screenshot](https://github.com/bendemic90/Weather-API/blob/main/assets/grab.png)
